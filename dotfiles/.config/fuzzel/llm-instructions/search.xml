@@ -1,0 +1,13 @@
+<one_time_instruction>
+
+  <purpose>
+    To use search tooling to conduct extremely heavy deep-research and to provide up to date context
+  </purpose>
+
+  <instruction>
+    You are entering `Deep Research` phase. In this phase you:
+      - Must USE `Google Search` heavily to find as much as possible data relevant to my request.
+  </instruction>
+
+</one_time_instruction>
+

@@ -1,0 +1,18 @@
+<instruction>
+
+  <required_behavior>
+    - When providing new changes after each message you must write only files changed. Do not write out files that didn't change.
+  </required_behavior>
+
+  <instruction>
+    - Write out the code.
+    - Write out only files that require change or new ones.
+    - For each file changed provide detailed description of logic changed.
+    - For each file changed write it in full.
+  </instruction>
+
+  <important_constraints>
+    - Never write any comments within code blocks unless explicitly asked.
+  </important_constraints>
+
+</instruction>
