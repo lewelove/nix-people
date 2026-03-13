@@ -36,7 +36,6 @@
     # ./services/xremap.nix
     ./services/keyd.nix
     ./services/olivetin.nix
-    ./services/open-webui.nix
 
     # User Services
     # ./services/user/wlsunset.nix
