@@ -36,11 +36,6 @@ let
       hash = "sha256-Nnud/gWl8DVIUa4g4oDYklDZclQRklHl5Uxvh/aEPYQ=";
     };
 
-    untrap = fetchExtension {
-      id = "enboaomnljigfhfjfoalacienlhjlfil";
-      version = "9.3.7";
-      hash = "sha256-ePj7aR8iOvpDYs1QpaY35UEuLLhIpRjHhSDZuJkstKc=";
-    };
   };
 
   windowUserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
@@ -50,7 +45,7 @@ let
   commonArgs = [
     "--test-type"
     "--unsafely-treat-insecure-origin-as-secure=${trustedOrigins}"
-    "--load-extension=${extensions.ublock-origin.drv},${extensions.untrap.drv},${extensions.sponsorblock.drv}"
+    "--load-extension=${extensions.ublock-origin.drv},${extensions.sponsorblock.drv}"
     "--extension-mime-request-handling=always-prompt-for-install"
     "--no-default-browser-check"
     "--restore-last-session"
