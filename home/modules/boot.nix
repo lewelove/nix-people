@@ -1,16 +1,17 @@
-{ config, pkgs, username, hostname, ... }:
+{ config, pkgs, ... }:
 
 {
-
-  # --- Boot ---
   boot.kernelPackages = pkgs.linuxPackages;
-  boot.loader.efi.canTouchEfiVariables = true;
+  
+  # --- Legacy BIOS Boot ---
   boot.loader.grub = {
     enable = true;
-    device = "nodev";
-    efiSupport = true;
+    efiSupport = false;
+    
+    device = "/dev/sdb"; 
+    
     useOSProber = false;
   };
-  boot.supportedFilesystems = [ "btrfs" "nfs" "ntfs" ];
 
+  boot.supportedFilesystems = [ "btrfs" "nfs" "ntfs" ];
 }

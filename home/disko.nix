@@ -2,22 +2,22 @@
   disko.devices = {
     disk = {
       main = {
-        device = "/dev/sda"; 
+        device = "/dev/sdb"; 
         type = "disk";
         content = {
           type = "gpt";
           partitions = {
-            ESP = {
+            biosboot = {
+              size = "1M";
+              type = "EF02";
               priority = 1;
-              name = "ESP";
-              start = "1M";
-              end = "1G";
-              type = "EF00";
+            };
+            boot = {
+              size = "1G";
               content = {
                 type = "filesystem";
-                format = "vfat";
+                format = "ext4";
                 mountpoint = "/boot";
-                mountOptions = [ "umask=0077" ];
               };
             };
             root = {
