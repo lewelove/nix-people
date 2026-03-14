@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 
-git clone https://github.com/lewelove/nix-people.git /mnt/nix-config
-
-cd /mnt/nix-config/home
+set -e
 
 nix --extra-experimental-features "nix-command flakes" run github:nix-community/disko -- --mode zap_create_mount ./disko.nix
 
-git clone https://github.com/lewelove/nix-people.git /home/romma/nix-config
+mkdir -p /mnt/home/romma
 
-cd /home/romma/nix-config
+git clone https://github.com/lewelove/nix-people.git /mnt/home/romma/nix-config
 
-ls
+nixos-install --flake /mnt/home/romma/nix-config/home#home
