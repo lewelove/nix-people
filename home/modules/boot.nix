@@ -8,7 +8,7 @@
     enable = true;
     efiSupport = false;
     
-    device = "/dev/sdb"; 
+    device = "/dev/disk/by-id/ata-KINGSTON_SA400S37240G_50026B7685338AC4"; 
     
     useOSProber = false;
   };
