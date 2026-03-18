@@ -12,7 +12,6 @@
       xdg.userDirs = {
         enable = true;
         createDirectories = true;
-        download = "/run/media/${username}/1000xhome/downloads";
       };
     };
   };
